@@ -42,12 +42,12 @@ export default function Home() {
 			<LoveNote />
 		  </section>
 
-		  <section className="special-dates-section my-8">
+		  {/* <section className="special-dates-section my-8">
 			<h2 className="section-title text-3xl font-semibold text-center mb-6">
 			  Special Dates
 			</h2>
 			<SpecialDates />
-		  </section>
+		  </section> */}
 
 		  <section className="music-player-section my-8 bg-gray-800 p-6 rounded-lg">
 			<h2 className="section-title text-3xl font-semibold text-center mb-6 text-pink-500">

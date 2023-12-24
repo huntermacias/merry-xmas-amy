@@ -9,7 +9,7 @@ const galleryData = [
 	},
 	{
 	  id: "image2",
-	  src: "/images/2.JPG",
+	  src: "/images/2.jpg",
 	  title: "Musical Souls in Oregon",
 	  description: "Our unforgettable night at the ZHU concert, where music and love intertwined under the Oregon sky.",
 	  date: "10/27/2023",
