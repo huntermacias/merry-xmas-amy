@@ -72,7 +72,7 @@ const openModal = (image: any) => {
               <div className="relative w-full h-60">
                 <img src={image.src} alt={`${image.title}`} className="object-cover w-full h-full" />
               </div>
-              <div className="p-4 flex hover:hidden justify-between items-center bg-soft-blush">
+              <div className="p-4 flex justify-between items-center bg-soft-blush">
                 <div>
                   <p className="font-semibold font-romantic text-deep-red">{image.title}</p>
                   <div className="flex items-center font-sans text-sm text-charcoal">
@@ -107,34 +107,40 @@ type ModalProps = {
 };
 
 const Modal = ({ image, closeModal }: ModalProps) => (
-  <div
-	className="fixed inset-0 bg-black bg-opacity-60 overflow-y-auto h-full w-full flex justify-center items-center"
-	onClick={closeModal}
-  >
-	<div className="relative bg-soft-white rounded-lg shadow-xl overflow-hidden max-w-2xl w-full mx-4">
-	  <div className="p-5">
-		<h3 className="text-2xl font-romantic text-deep-red mb-3">
-		  {image.title}
-		</h3>
-		<div className="border-b border-gray-300 mb-4"></div>
-		<div className="text-charcoal text-sm mb-4">
-		  <p>{image.description}</p>
+	<div
+	  className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-50"
+	  onClick={closeModal}
+	>
+	  <div
+		className="bg-soft-white rounded-lg shadow-xl overflow-hidden max-w-2xl w-full"
+		onClick={(e) => e.stopPropagation()} // Prevent clicks inside the modal from closing it
+	  >
+		<div className="p-5">
+		  <h3 className="text-2xl font-romantic text-deep-red mb-3">
+			{image.title}
+		  </h3>
+		  <div className="border-b border-gray-300 mb-4"></div>
+		  <div className="text-charcoal text-sm mb-4">
+			<p>{image.description}</p>
+		  </div>
+		  <img
+			src={image.src}
+			alt={image.title}
+			className="mx-auto"
+			style={{ maxWidth: '100%', height: 'auto' }} // Responsive image
+		  />
 		</div>
-		<img
-		  src={image.src}
-		  alt={image.title}
-		  width={600}
-		  height={400}		 
-		  className="mx-auto"
-		/>
-	  </div>
-	  <div className="flex justify-end p-4">
-		<button className="px-4 py-2 bg-rich-pink text-white text-base font-medium rounded-md hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300 transition duration-300 ease-in-out">
-		  Close
-		</button>
+		<div className="flex justify-end p-4">
+		  <button
+			className="px-4 py-2 bg-rich-pink text-white text-base font-medium rounded-md hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300 transition duration-300 ease-in-out"
+			onClick={closeModal}
+		  >
+			Close
+		  </button>
+		</div>
 	  </div>
 	</div>
-  </div>
-);
+  );
+  
 
 export default Gallery;
