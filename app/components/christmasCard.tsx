@@ -40,9 +40,6 @@ const ChristmasCard = () => {
           transition={{ duration: 0.8, ease: 'easeInOut' }}
         >
           <h3 className="text-2xl font-semibold mb-3">A Special Message</h3>
-          <p className="text-lg">
-            May your holidays sparkle with joy and laughter. Merry Christmas!
-          </p>
           <p className="text-lg">My Sweet Kitty,</p>
           <p className="text-lg">
             On this special Christmas day, as we find ourselves away from our

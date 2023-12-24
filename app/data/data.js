@@ -4,7 +4,7 @@ const galleryData = [
 	  src: "/images/1.jpg",
 	  title: "Purrfect Companions",
 	  description: "Amy's loving embrace with our furry friend, capturing a moment of pure joy and comfort.",
-	  date: "4/25/2034",
+	  date: "4/25/2023",
 	  icon: "cat"
 	},
 	{
